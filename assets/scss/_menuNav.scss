@@ -1,0 +1,57 @@
+/***************************************************/
+/*------------------ MENU NAV --------------------/
+/***************************************************/
+nav{
+    ul{
+        background: white;
+        height: 100%;
+        width: 100%;
+        padding-top: 30px;
+        li{
+            a{
+                font-size: 18px;
+                font-family: $fuenteTexto;
+                font-weight: bold;
+                color: black;
+                display: block;
+                padding: 20px 0;
+                padding-left: 20px;
+                transition: all .5s;
+                text-transform: uppercase;
+                &:hover{
+                    background-color: $colorPrincipal;
+                    color: #fff;
+                }
+                .active{ //revisar! no funciona
+                    background-color: $colorPrincipal;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.btn-close-menu{
+    background: $colorPrincipal;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 30px;
+    i{
+        color: #fff;
+        font-size: 30px;
+    }
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-line-sep{
+    margin-top: 30px;
+    border: .5px solid rgba(0,0,0,0.1);
+}

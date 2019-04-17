@@ -1,0 +1,19 @@
+/***************************************************/
+/*------------------ HEADER --------------------/
+/***************************************************/
+header{
+    .header-row{
+        background: #fff;
+        height: 110px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .menu-btn{
+            font-size: 30px;
+            color: $colorPrincipal;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/***************************************************/
+/*------------------ NOSOTROS --------------------/
+/***************************************************/   
+
+.about-bg{
+    background: url("../img/about-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about-content{
+    color: #fff;
+    display: grid;
+    grid-row-gap: 20px;
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+.about-more{
+    margin-top: 15px;
+    text-align: center;
+}
+@media screen and (min-width: 768px){
+    .about-bg{
+        background: url("../img/about-bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .about-content{
+        grid-template-columns: 1fr 1fr;
+        .title-line{
+            grid-column: 2;
+            grid-row: 2;
+            margin-left: 15px;
+        }
+    }
+    .about-title, .about-p, .about-more{
+        padding-left: 15px;
+    }
+    .about-title{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .about-title{
+        h2{
+            text-align: left;
+        }
+    }
+    .about-p{
+        grid-row: 3;
+        grid-column: 2;
+    }
+    .about-more{
+        grid-row: 4;
+        grid-column: 2;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .about-bg{
+      background-attachment: fixed;
+    }
+  }

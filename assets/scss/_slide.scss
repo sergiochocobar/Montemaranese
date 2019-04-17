@@ -1,0 +1,163 @@
+/***************************************************/
+/*------------------ SLIDE --------------------/
+/***************************************************/
+
+.slide{
+    background: url("../img/slide2.png");
+    height: 372px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-text{    
+    h5{
+        color: #fff;
+        font-size: 16px;
+    }
+    h4{
+        color: #fff;
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    h1{
+        color: #fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+}
+
+.slide-btn{
+    margin-top: 20px;
+}
+
+.btn-bg{
+    display: inline-block;
+    background-color: $colorPrincipal;
+    padding: 10px 30px; 
+}
+
+.btn-bg-text{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slide-btn-r{
+    i{
+        display: none;
+    }
+  }
+
+.slide-btn-r-text{
+    display: none;
+}
+
+.anniversary-logo{
+    display: none;
+}
+
+@media screen  and (min-width: 768px){
+    .slide-content{
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .slide-btn-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-btn{
+        margin: 0;
+    }
+
+    .slide-btn-r{
+        background-color: $colorPrincipal;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-btn-r{
+        i{
+            display: inline-block;
+            color: #fff;
+        }        
+    }
+    .slide-btn-r-text{
+        display: inline-block;
+        margin-left: 5px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    // .anniversary-logo{
+    //     display: inline-block;
+    //     width: 250px;
+    // }
+
+    // .anniversary-logo img{
+    //     width: 100%;
+    // }
+}
+
+@media screen and (min-width: 992px){
+    .slide{
+        background-attachment: fixed;
+        height: 600px;
+    }
+
+    .slide-text{
+        h5{
+            font-size: 22px;
+        }
+        h4{
+            font-size: 28px;
+        }
+        h1{
+            font-size: 40px;
+        }   
+    } 
+}
+
+@media screen and (min-width: 1200px){
+    .slide{
+        height: 800px;
+    }  
+    .slide-btn-r-text{
+        font-size: 18px;
+    }    
+    .slide-text{
+        h5{
+            font-size: 38px;
+        }
+        h4{
+            font-size: 54px;
+        }
+        h1{
+            font-size: 72px;
+        }   
+    } 
+}

@@ -1,0 +1,152 @@
+/***************************************************/
+/*--------------------- CONTACTO --------------------/
+/***************************************************/  
+
+.contact-content{
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.form-section-content{
+    display: grid;
+    grid-row-gap: 40px;
+}
+
+.form-contact{
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.input-form-place{
+	border-width: 0;
+	outline: 0;
+	border: 1px solid rgba(0,0,0,0.2);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	padding: 10px 30px;
+}
+
+.input-form-text{
+	border-width: 0;
+	outline: 0;
+	border: 1px solid rgba(0,0,0,0.2);
+	resize: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	padding: 10px 30px;
+}
+
+.input-form-send{
+	background-color: $colorPrincipal;
+	border-width: 0;
+	float: right;
+	cursor: pointer;
+	padding: 10px 30px;
+	font-size: 18px;
+	color: white;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+  margin-top: 15px;
+}
+
+.data-and-social{
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.data-contact-title h4, .social-contact-title h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.data-contact-content p, .social-contact-content p{
+    /* margin-bottom: 15px; */
+    display: inline;
+}
+
+.data-contact-content i{
+    width: 30px;
+    text-align: center;
+    color: $colorPrincipal;
+}
+
+.social-contact-p{
+    padding-left: 10px;
+    a{
+        display: inline-block;
+        margin-right: 15px;
+    }
+    i{
+        color: $colorPrincipal;
+        font-size: 22px;
+    }
+}
+  
+@media screen and (min-width:768px){
+    .form-contact{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 15px;
+    } 
+    .input-form-name{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .input-form-mail{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .input-form-text{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    .social-contact-p{
+        a{
+            margin-right: 25px;
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (min-width:992px){
+    .form-section-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .form-contact-content{
+        padding-right: 15px;
+    }
+    .form-contact{
+        grid-template-columns: 1fr;
+    }
+    .input-form-name {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .input-form-mail {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .input-form-text {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .input-form-send{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .data-contact-content,
+    .social-contact-content{
+        padding-left: 15px;
+    }
+    .social-contact-p{
+        a{
+            margin-top: 15px;
+        }
+    }
+}

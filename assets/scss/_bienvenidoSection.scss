@@ -1,0 +1,117 @@
+/***************************************************/
+/*------------------ BIENVENIDO --------------------/
+/***************************************************/
+.welcome-content{
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.welcome-section{
+    .section-title{
+        grid-row: 1;
+    }
+    .title-line{
+        grid-row: 2;
+    }
+}
+
+.welcome-p{
+    grid-row:4;
+    text-align: justify;
+}
+
+.welcome-more{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.welcome-content{
+    h3{
+        font-size: 16px;
+        text-align: center; 
+    }    
+}
+
+.welcome-video{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        position: absolute;
+        font-size: 60px;
+        color: white;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.video-screen-s i{
+    display: inline-block;
+}
+
+.video-screen-xl i{
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    .section-title{
+        margin-bottom: 0;
+    }
+    .welcome-content{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+        .title-line{
+            margin: 0;
+            display: inline-table;
+            grid-column: 1;
+            grid-row: 2;
+        } 
+    }
+    .welcome-title{
+        h2,h3{
+            text-align: left;
+        }
+        h3{
+            margin-bottom: 5px; 
+        }
+    }    
+    .welcome-p{
+        grid-row: 3;
+    }
+    .welcome-more{
+        text-align: left;
+        grid-row: 4;
+    }
+    .welcome-video{
+        grid-row: 1 / span 4;
+        padding-top: 20px;
+        align-content: center;
+    }
+    .video-screen-s{
+        i{
+            display: none;
+        }
+    }
+    .video-screen-xl{
+        i{
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (min-width: 992px){
+    .welcome-title{
+        h3{
+            font-size: 18px;
+        }
+    }
+    .welcome-video{
+        padding-top: 0; 
+    }
+    .welcome-p{
+        padding-right: 15px; 
+    }
+}

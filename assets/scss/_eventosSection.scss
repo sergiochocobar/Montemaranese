@@ -1,0 +1,54 @@
+/***************************************************/
+/*---------------------EVENTOS --------------------/
+/***************************************************/   
+
+.bg-grey{
+    background-color: rgba(241, 241, 241, 0.5);
+}
+.event-content{
+    display: grid;
+    grid-row-gap: 20px;
+}
+.event-box{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+}
+.event-white-box{
+    background-color: #fff;
+    padding: 20px 15px 20px 15px;
+    display: grid;
+    grid-row-gap: 10px;
+}
+.event-white-box h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.event-white-box{
+    i{
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-right: 10px;
+        color: $colorPrincipal;
+        font-size: 18px; 
+    }
+}
+.event-home-link{
+    text-align: center;
+}
+.event-more{
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 768px){
+    .event-box{
+        grid-template-columns: 1fr 2fr;
+    }
+    .event-white-box{
+        grid-row-gap: 5px;
+    }    
+    .event-home-link{
+        text-align: right;
+    }
+}
