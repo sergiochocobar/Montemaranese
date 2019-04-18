@@ -121,7 +121,7 @@ header {
   position: fixed;
   width: 100%;
   transition: all 0.3s;
-  z-index: 1;
+  z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
   header .header-row {
     background: #fff;
@@ -323,11 +323,40 @@ header {
     font-size: 18px; }
 
   .slide-text h5 {
-    font-size: 38px; }
+    font-size: 38px;
+    animation-name: textSlide;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0, 0.01, 0, 1); }
   .slide-text h4 {
-    font-size: 54px; }
+    font-size: 54px;
+    animation-name: textSlide;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.26, 0, 0, 1); }
   .slide-text h1 {
-    font-size: 72px; } }
+    font-size: 72px;
+    animation-name: textSlide;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.31, 0, 0, 1); }
+
+  .slideButtons {
+    animation-name: slideButtons;
+    animation-duration: 2s; } }
+@keyframes textSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes slideButtons {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /***************************************************/
 /*------------------ BIENVENIDO --------------------/
 /***************************************************/
@@ -578,41 +607,72 @@ header {
 .event-box {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   display: grid; }
+  .event-box figure {
+    position: relative; }
+    .event-box figure .img-color {
+      position: absolute;
+      background-color: rgba(17, 152, 122, 0.5);
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      z-index: 1; }
 
 .event-white-box {
   background-color: #fff;
   padding: 20px 15px 20px 15px;
-  display: grid;
-  grid-row-gap: 10px; }
-
-.event-white-box h3 {
-  font-size: 18px;
-  font-weight: bold; }
-
-.event-white-box i {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  margin-right: 10px;
-  color: #11987A;
-  font-size: 18px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .event-white-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .event-white-box p {
+    margin-bottom: 15px; }
+  .event-white-box span {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 20px; }
+    .event-white-box span i {
+      width: 20px;
+      text-align: center;
+      margin-right: 10px;
+      color: #11987A;
+      font-size: 14px; }
 
 .event-home-link {
-  text-align: center; }
+  text-align: center;
+  margin-top: 15px; }
 
 .event-more {
   text-align: center;
   margin-top: 15px; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .event-box {
     grid-template-columns: 1fr 2fr; }
 
   .event-white-box {
-    grid-row-gap: 5px; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; }
+    .event-white-box h3 {
+      margin-bottom: 10px; }
+    .event-white-box p {
+      margin-bottom: 15px; }
+    .event-white-box span {
+      font-style: italic;
+      font-size: 16px;
+      margin-bottom: 5px; }
+      .event-white-box span i {
+        font-size: 14px; }
 
   .event-home-link {
-    text-align: right; } }
+    position: absolute;
+    right: 15px;
+    bottom: 15px; } }
 /***************************************************/
 /*--------------------- CONTACTO --------------------/
 /***************************************************/

@@ -12,43 +12,84 @@
 .event-box{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     display: grid;
+    figure{
+        position: relative;
+        .img-color{
+            position: absolute;
+            background-color: rgba($colorPrincipal, 0.5);
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            z-index: 1;            
+        }
+    }
 }
+
 .event-white-box{
     background-color: #fff;
     padding: 20px 15px 20px 15px;
-    display: grid;
-    grid-row-gap: 10px;
-}
-.event-white-box h3{
-    font-size: 18px;
-    font-weight: bold;
-}
-.event-white-box{
-    i{
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        margin-right: 10px;
-        color: $colorPrincipal;
-        font-size: 18px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 15px; 
+    }
+    span{
+        font-style: italic;
+        font-size: 16px;
+        margin-bottom: 5px;
+        line-height: 20px;
+        i{
+            width: 20px;
+            text-align: center;
+            margin-right: 10px;
+            color: $colorPrincipal;
+            font-size: 14px; 
+        }
     }
 }
+
 .event-home-link{
     text-align: center;
+    margin-top: 15px;
 }
 .event-more{
     text-align: center;
     margin-top: 15px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 992px){
     .event-box{
         grid-template-columns: 1fr 2fr;
     }
     .event-white-box{
-        grid-row-gap: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        h3{
+            margin-bottom: 10px; 
+        }
+        p{
+            margin-bottom: 15px;
+        }
+        span{
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 5px;
+            i{  
+                font-size: 14px;
+            }
+        }
     }    
     .event-home-link{
-        text-align: right;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
     }
 }

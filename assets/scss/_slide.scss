@@ -151,12 +151,61 @@
     .slide-text{
         h5{
             font-size: 38px;
+            animation-name: textSlide;
+            animation-duration: 0.5s;
+            animation-timing-function: cubic-bezier(0, 0.01, 0, 1);
+           
         }
         h4{
             font-size: 54px;
+            animation-name: textSlide;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0.26, 0, 0, 1);
+            
         }
         h1{
             font-size: 72px;
+            animation-name: textSlide;
+            animation-duration: 2s; 
+            animation-timing-function: cubic-bezier(0.31, 0, 0, 1);
+            
         }   
     } 
+
+    
+    .slideButtons{
+        animation-name: slideButtons;
+        animation-duration: 2s; 
+
+    }
+}
+
+@keyframes textSlide{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+}
+
+@keyframes slideButtons{
+    0%{
+        opacity: 0;
+    }
+    
+    25%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }

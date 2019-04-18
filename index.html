@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
@@ -83,10 +85,10 @@
           <div class="container">
             <div class="slide-content">
               <div class="slide-text">
-                <h5>Bienvenido a</h5>
-                <h4>Nuestro Sitio Web</h4>
-                <h1>Montemaranese</h1>
-                <div class="slide-btn-content">
+                <h5 class="">Bienvenido a</h5>
+                <h4 class="">Nuestro Sitio Web</h4>
+                <h1 class="animacion-sergio">Montemaranese</h1>
+                <div class="slide-btn-content slideButtons">
                   <a href="#nosotros" class="slide-btn btn-bg btn-bg-text scroll">Nosotros</a>
                   <a href="#" class="slide-btn-r"><i class="fas fa-play"></i></a>
                   <a href="#bienvenido" class="slide-btn-r-text scroll">Ver último video</a>
@@ -108,21 +110,21 @@
   
         <section id="bienvenido" class="section-space">
           <div class="container">
-            <div class="welcome-content">
+            <div class="welcome-content" >
               <div class="welcome-title">
-                <h3>Canal de Youtube</h3>
-                <h2 class="section-title">Montemaranese</h2>
+                <h3  data-aos="fade-up" data-aos-duration="500">Canal de Youtube</h3>
+                <h2 class="section-title"  data-aos="fade-up" data-aos-duration="500">Montemaranese</h2>
               </div>
-              <div class="title-line"></div>
-              <div class="welcome-p">
+              <div class="title-line" data-aos="fade-up" data-aos-duration="500"></div>
+              <div class="welcome-p"  data-aos="fade-up" data-aos-duration="700">
                 <p>En esta sección podes tener al alcance nuestros ultimos videos. Visita nuestro canal de Youtube ¡para ver todos!</p>
               </div>
-              <div class="welcome-video">
+              <div class="welcome-video" data-aos="fade-up" data-aos-duration="1000">
                 <img src="assets/img/welcome-video.png"  alt="">
                 <a href="https://www.youtube.com/watch?v=t4oqcwb6nas" target="_blank" class="video-screen-s"><i class="far fa-play-circle"></i></a>
                 <a href="#" class="video-screen-xl"><i class="my_popup_open far fa-play-circle"></i></a>
               </div>
-              <div class="welcome-more">
+              <div class="welcome-more" data-aos="fade-up" data-aos-duration="700">
                 <a href="https://www.youtube.com/channel/UCIuhn3an9d2ZC-5NqDAzDag/videos" target="_blank" class="btn-border btn-text">Ir a Canal</a>
               </div>
             </div>
@@ -141,13 +143,13 @@
             <div class="container">
               <div class="about-content">
                 <div class="about-title">
-                  <h2 class="section-title">Nosotros</h2>
+                  <h2 class="section-title" data-aos="fade-left" data-aos-duration="500">Nosotros</h2>
                 </div>
-                <div class="title-line"></div>
-                <div class="about-p">
+                <div class="title-line" data-aos="fade-left" data-aos-duration="500"></div>
+                <div class="about-p" data-aos="fade-left" data-aos-duration="700" >
                   <p>La tradicional celebración anual en homenaje a: San Givanni, protector del pueblo de Montemarano, Prov. de Avelino; tiene una antigüedad de casi 500 años. En Martín Coronado, Prov. de Buenos Aires; estos festejos se realizan desde 1968. La institución fue creada por un numeroso grupo de familias nativas de Montemarano, quienes arribaron a la Argentina después de la Segunda Guerra Mundial. Llegaron, como tantos otros, cargados de esperanzas, dispuestos a iniciar una nueva vida de lucha y de trabajo.</p>
                 </div>
-                <div class="about-more">
+                <div class="about-more" data-aos="fade-left" data-aos-duration="700">
                   <a href="nosotros.html" target="_blank" class="btn-text">Leer Más</a>
                 </div>
               </div>
@@ -163,13 +165,13 @@
           <div class="container">
             <div class="gallery-content">
               <div class="gallery-title">
-                <h2 class="section-title">Galería</h2>
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="500">Galería</h2>
               </div>
-              <div class="title-line"></div>
+              <div class="title-line"  data-aos="fade-up" data-aos-duration="500"></div>
   
               <div class="gallery-rows">
                 <div class="gallery-row-1">
-                  <figure class="gallery-img-1">
+                  <figure class="gallery-img-1"  data-aos="fade-up" data-aos-duration="600">
                     <a href="assets/img/gallery/instalaciones/1.jpg" data-fancybox="gallery1" data-caption="Nuestras instalaciones">
                       <img src="assets/img/gallery/instalaciones/1.jpg" alt="" />
                       <figcaption class="album-caption">Nuestras Instalaciones</figcaption>
@@ -182,7 +184,7 @@
                     </a>
                   </figure>
                   
-                  <figure class="gallery-img-1">
+                  <figure class="gallery-img-1" data-aos="fade-up" data-aos-duration="1000">
                     <a href="assets/img/gallery/diciembre/1.jpeg" data-fancybox="gallery2" data-caption="Festejo Fin de Año">
                       <img src="assets/img/gallery/diciembre/2.jpeg" alt="" />
                       <figcaption class="album-caption">Festejo Fin de Año</figcaption>
@@ -250,20 +252,21 @@
           <div class="container">
             <div class="event-content">
               <div class="event-title">
-                <h2 class="section-title">Eventos</h2>
+                <h2 class="section-title"  data-aos="fade-up" data-aos-duration="500">Eventos</h2>
               </div>
-              <div class="title-line"></div>
+              <div class="title-line"  data-aos="fade-up" data-aos-duration="500"></div>
   
-              <div class="event-box">
+              <div class="event-box" data-aos="flip-up">
                 <figure>
+                  <div class="img-color"></div>
                   <img src="assets/img/event-1.jpg" width="100%"alt="">
                 </figure>
                 <div class="event-white-box">
-                  <h3>Asamblea General Ordinaria</h3>
+                  <h3>Asamblea General Ordinaria.</h3>
                   <p>Asamblea General Ordinaria. Aprobación memoria y balance. Renovación de comisión directiva.</p>
-                  <p><i class="far fa-clock"></i>Domingo 10 de Marzo | 16hs</p>
-                  <p><i class="fas fa-map-marker-alt"></i>Remedios de Escalada 7643, Martín Coronado, Buenos Aires, Argentina</p>
-                  <!--<div class="event-home-link"><a href="#" class="btn-text">Detalles</a></div>-->
+                  <span><i class="far fa-clock"></i>Domingo 10 de Marzo | 16hs</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Remedios de Escalada 7643, Martín Coronado, Buenos Aires, Argentina</span>
+                  <div class="event-home-link"><a href="#" class="btn-text">Detalles</a></div>
                 </div>
               </div>
   
@@ -306,10 +309,10 @@
           <div class="container">
             <div class="contact-content">
               <div class="contact-title">
-                <h2 class="section-title">Contacto</h2>
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="500">Contacto</h2>
               </div>
-              <div class="title-line"></div>
-              <div class="form-section-content">
+              <div class="title-line" data-aos="fade-up" data-aos-duration="500"></div>
+              <div class="form-section-content" data-aos="fade-right" data-aos-duration="500">
                 <div class="form-contact-content">
                   <form action="formulario.php" method="post" name="email_form" id="email_form" class="form-contact">
                     <input type="text" name="nombre" required value="" placeholder="Nombre" class="input-form-place input-form-name">
@@ -318,7 +321,7 @@
                     <input type="submit" name="enviar" value="Enviar" class="input-form-send">
                   </form>
                 </div>
-                <div class="data-and-social">
+                <div class="data-and-social"  data-aos="fade-right" data-aos-duration="700">
                   <div class="data-contact-content">
                     <div class="data-contact-title">
                       <h4>Datos</h4>
@@ -391,10 +394,29 @@
     <script src="assets/js/slidereveal.js"></script>
     <script src="assets/js/jquery.popupoverlay.js"></script>
     <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 
+    <script>
 
+
+        if ($(window).width() <= 992) {  
+
+            AOS.init({
+            disable: true,
+            })
+
+        }else{
+            AOS.init({
+            disable: false,
+            once: true
+            })
+        }     
+
+
+     
+    </script>
 
 
 
@@ -417,7 +439,7 @@
 
 
 
-    
+
     <!-- <script>    
       //STICKY NAVBAR! tiene en css la clas .sticky
 
