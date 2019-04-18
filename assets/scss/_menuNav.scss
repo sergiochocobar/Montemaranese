@@ -1,7 +1,11 @@
 /***************************************************/
 /*------------------ MENU NAV --------------------/
 /***************************************************/
-nav{
+.nav-desk-content{
+    display: none;
+}
+
+.nav-phone-content{
     ul{
         background: white;
         height: 100%;
@@ -46,7 +50,7 @@ nav{
     }
 }
 
-.navigation{
+.nav-phone{
     display: flex;
     flex-direction: row;
 }
@@ -55,3 +59,44 @@ nav{
     margin-top: 30px;
     border: .5px solid rgba(0,0,0,0.1);
 }
+
+
+
+@media screen and (min-width:992px){
+    .nav-phone-content,
+    .menu-btn,
+    .btn-close-menu{
+        display: none;
+    }
+
+    .nav-desk-content{
+        display: inline-block;
+        ul{
+            line-height: initial;
+            display: flex;
+            flex-direction: row;
+        }
+        li{
+            margin-left: 40px;
+            font-size: 18px;
+            &:first-child{
+                margin-left: 0;
+            }
+            a{
+                padding: 0 0 8px 0;
+                border-bottom: 3px solid transparent;
+                transition: all 0.5s;   
+                &:hover{
+                    color: $colorPrincipal;
+                    border-bottom: 3px solid $colorPrincipal; 
+                }
+            }
+        }
+    }
+    header .active>a{
+        border-bottom: 3px solid $colorPrincipal !important;    
+        color: $colorPrincipal;
+    }
+
+}
+

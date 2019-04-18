@@ -12,39 +12,43 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
     <title>Montemaranese - Asociación Italiana Cultural y Recreativa</title>
   </head>
-  <body>
+  <body id="top">
     <div id="page">
       <!--**************************************************
   			                    TOPBAR
   	******************************************************-->
-      <div id="top" class="topbar">
-        <div class="container">
-          <div class="topbar-row">
-            <span>Seguinos en nuestras redes!</span>
-            <ul>
-              <li><a href="https://www.facebook.com/MontamaraneseAR" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.instagram.com/asociacionmontemaranese/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.youtube.com/channel/UCIuhn3an9d2ZC-5NqDAzDag/videos" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      
   
       <!--**************************************************
                               HEADER
       ******************************************************-->
   
-      <header>
+      <header id="hideTopbar" class="nav">
+        <!-- Inicio Topbar -->
+        <div class="topbar">
+          <div class="container">
+            <div class="topbar-row">
+              <span>Seguinos en nuestras redes!</span>
+              <ul>
+                <li><a href="https://www.facebook.com/MontamaraneseAR" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/asociacionmontemaranese/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCIuhn3an9d2ZC-5NqDAzDag/videos" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+        <!-- Fin de Topbar -->
         <div class="container">
           <div class="header-row">
             <div class="header-logo">
               <a href="index.html"><img src="assets/img/logo.png" alt="logo" width="72px" height="72px"></a>
             </div>
+
             <div id="trigger" class="menu-btn"><i class="fas fa-bars"></i></div>
-            <nav id="slider" class="navigation">
-              <div id="hide-btn" class="btn-close-menu"><i class="fas fa-times"></i></div>
+
+            <nav class="nav-desk-content">
               <ul>
-                <li><a href="#top" class="scroll">Inicio</a></li>
+                <li class="active"><a href="#top" class="scroll">Inicio</a></li>
                 <li><a href="#nosotros" class="scroll">Nosotros</a></li>
                 <li><a href="#galeria" class="scroll">Galería</a></li>
                 <li><a href="#eventos" class="scroll">Eventos</a></li>
@@ -52,9 +56,23 @@
                 <div class="nav-line-sep" class="scroll"></div>
               </ul>
             </nav>
+
           </div>
         </div>
       </header>
+
+      <nav id="slider" class="nav-phone-content nav-phone">
+        <div id="hide-btn" class="btn-close-menu"><i class="fas fa-times"></i></div>
+        <ul>
+          <li><a href="#top" class="scroll">Inicio</a></li>
+          <li><a href="#nosotros" class="scroll">Nosotros</a></li>
+          <li><a href="#galeria" class="scroll">Galería</a></li>
+          <li><a href="#eventos" class="scroll">Eventos</a></li>
+          <li><a href="#contacto" class="scroll">Contacto</a></li>
+          <div class="nav-line-sep" class="scroll"></div>
+        </ul>
+      </nav>
+
       <main>
   
         <!--**************************************************
@@ -399,6 +417,34 @@
 
 
 
+    
+    <!-- <script>    
+      //STICKY NAVBAR! tiene en css la clas .sticky
+
+      $(document).ready(function() {
+      // grab the initial top offset of the navigation 
+      var stickyNavTop = $('.nav').offset().top;
+
+      // our function that decides weather the navigation bar should have "fixed" css position or not.
+      var stickyNav = function(){
+          var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+                  
+          // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+          // otherwise change it back to relative
+          if (scrollTop > stickyNavTop) { 
+              $('.nav').addClass('sticky');
+          } else {
+              $('.nav').removeClass('sticky'); 
+          }
+      };
+      stickyNav();
+      // and run it again every time you scroll
+      $(window).scroll(function() {
+          stickyNav();
+      });
+      });    
+    </script> -->
+
 
 
 
@@ -410,7 +456,8 @@
         trigger: $("#trigger"),
         position: "right",
         overlay: true,
-        push: false
+        push: false,
+        width: 240
       })
       $("#hide-btn").click(function(){
         slider.slideReveal("hide");
@@ -455,6 +502,23 @@
     })
 
     </script>
+
+
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    
+    window.onscroll = function(){
+      var currentScrollpos = window.pageYOffset;
+
+      if (prevScrollpos > currentScrollpos){
+        document.getElementById("hideTopbar").style.top="0";
+      }else{
+        document.getElementById("hideTopbar").style.top="-40px";
+      }
+      prevScrollpos = currentScrollpos;
+    }
+
+  </script>
 
   </body>
 </html>
