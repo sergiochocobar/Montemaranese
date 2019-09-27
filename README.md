@@ -1,4 +1,4 @@
-# Asociación Italiana Montemaranese  - Desarrollo Web
+# Asociación Italiana Montemaranese  - Desarrollo Front-end
 - HTML5
 - CSS3
 - SASS
